@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout | Ubuntu Fitness &amp; Wellness</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&amp;family=Nunito+Sans:wght@400;600;700&amp;display=swap" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+  <div><a class="skip-link" href="#main">Skip to main content</a></div>
+
+  <div class="promo-bar">
+    <div class="wrap"><span>Free courier delivery on products over <strong>R750</strong>. Collection in store is always free.</span></div>
+  </div>
+
+  <div class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark"></span>Ubuntu Fitness &amp; Wellness</a>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="services.html">Coaching and plans</a></li>
+        <li><a href="cart.html">Cart <span id="cart-count" class="cart-count">0</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="main">
+    <div class="wrap page-head">
+      <h1>Checkout</h1>
+    </div>
+
+    <div class="wrap">
+      <div id="checkout-empty" class="hidden">
+        <h2>Nothing to check out yet</h2>
+        <p class="muted">Your cart is empty. Add some products or a coaching plan first.</p>
+        <a class="btn" href="products.html">Shop products</a>
+      </div>
+
+      <div id="checkout-grid" class="checkout-grid">
+        <form id="checkout-form" action="checkout.html" method="post">
+
+          <fieldset class="fs">
+            <legend>Your details</legend>
+            <div class="field">
+              <label for="f-name">Full name</label>
+              <input type="text" id="f-name" name="name" maxlength="80" />
+              <span id="err-name" class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="f-email">Email address</label>
+              <input type="text" id="f-email" name="email" maxlength="120" />
+              <span id="err-email" class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="f-phone">Cell phone number</label>
+              <input type="text" id="f-phone" name="phone" maxlength="20" />
+              <span id="err-phone" class="field-error"></span>
+            </div>
+          </fieldset>
+
+          <fieldset id="delivery-fieldset" class="fs">
+            <legend>Delivery</legend>
+            <div class="choice">
+              <input type="radio" id="d-courier" name="delivery" value="courier" checked="checked" />
+              <label for="d-courier">Courier delivery. R80, or free when your products come to R750 or more.</label>
+            </div>
+            <div class="choice">
+              <input type="radio" id="d-collect" name="delivery" value="collect" />
+              <label for="d-collect">Collect in store. Free.</label>
+            </div>
+
+            <div id="address-block">
+              <div class="field">
+                <label for="f-street">Street address</label>
+                <input type="text" id="f-street" name="street" maxlength="100" />
+                <span id="err-street" class="field-error"></span>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="f-suburb">Suburb</label>
+                  <input type="text" id="f-suburb" name="suburb" maxlength="60" />
+                  <span id="err-suburb" class="field-error"></span>
+                </div>
+                <div class="field">
+                  <label for="f-city">City or town</label>
+                  <input type="text" id="f-city" name="city" maxlength="60" />
+                  <span id="err-city" class="field-error"></span>
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="f-province">Province</label>
+                  <select id="f-province" name="province">
+                    <option value="">Choose a province</option>
+                    <option value="Eastern Cape">Eastern Cape</option>
+                    <option value="Free State">Free State</option>
+                    <option value="Gauteng">Gauteng</option>
+                    <option value="KwaZulu-Natal">KwaZulu-Natal</option>
+                    <option value="Limpopo">Limpopo</option>
+                    <option value="Mpumalanga">Mpumalanga</option>
+                    <option value="North West">North West</option>
+                    <option value="Northern Cape">Northern Cape</option>
+                    <option value="Western Cape">Western Cape</option>
+                  </select>
+                  <span id="err-province" class="field-error"></span>
+                </div>
+                <div class="field">
+                  <label for="f-postal">Postal code</label>
+                  <input type="text" id="f-postal" name="postal" maxlength="4" />
+                  <span id="err-postal" class="field-error"></span>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="fs">
+            <legend>Payment</legend>
+            <p class="hint">This is a demo checkout, so no real money moves. Use the test card 4111 1111 1111 1111 with any future expiry date and any 3-digit security code. To see a declined payment, use 4000 0000 0000 0002.</p>
+            <div class="field">
+              <label for="f-cardnumber">Card number</label>
+              <input type="text" id="f-cardnumber" name="cardnumber" maxlength="23" />
+              <span id="err-cardnumber" class="field-error"></span>
+            </div>
+            <div class="field">
+              <label for="f-cardname">Name on card</label>
+              <input type="text" id="f-cardname" name="cardname" maxlength="80" />
+              <span id="err-cardname" class="field-error"></span>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-expiry">Expiry (MM/YY)</label>
+                <input type="text" id="f-expiry" name="expiry" maxlength="5" />
+                <span id="err-expiry" class="field-error"></span>
+              </div>
+              <div class="field">
+                <label for="f-cvv">Security code (CVV)</label>
+                <input type="text" id="f-cvv" name="cvv" maxlength="4" />
+                <span id="err-cvv" class="field-error"></span>
+              </div>
+            </div>
+          </fieldset>
+
+          <div>
+            <p id="form-message" class="notice hidden"></p>
+            <button type="submit" id="pay-btn" class="btn btn-wide">Pay now</button>
+          </div>
+        </form>
+
+        <div id="order-summary" class="summary"></div>
+      </div>
+      <noscript><p>Turn on JavaScript to use the checkout.</p></noscript>
+    </div>
+  </div>
+
+  <div class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <h3>Ubuntu Fitness &amp; Wellness</h3>
+        <p>Fitness kit, nutrition and coaching for people who train at home, at the gym, or both.</p>
+      </div>
+      <div>
+        <h3>Visit or contact us</h3>
+        <p>Store: [add your store address]</p>
+        <p>Phone: 011 000 0000</p>
+        <p>Email: <a href="mailto:hello@ubuntufitness.example">hello@ubuntufitness.example</a></p>
+      </div>
+      <div>
+        <h3>Shop</h3>
+        <p><a href="products.html">All products</a></p>
+        <p><a href="services.html">Coaching and plans</a></p>
+        <p><a href="cart.html">Your cart</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/products.js"></script>
+  <script type="text/javascript" src="js/cart.js"></script>
+  <script type="text/javascript" src="js/checkout.js"></script>
+</body>
+</html>

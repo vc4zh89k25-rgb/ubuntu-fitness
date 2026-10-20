@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Item | Ubuntu Fitness &amp; Wellness</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&amp;family=Nunito+Sans:wght@400;600;700&amp;display=swap" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <style>
+    /* Styles for this page only. Move them into css/style.css if you prefer. */
+    .pd { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 24px 0 48px; }
+    .pd-main { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 8px; background: #f0f0f0; display: block; }
+    .pd-icon { display: flex; align-items: center; justify-content: center; font-size: 96px; }
+    .pd-thumbs { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+    .pd-thumb { width: 72px; height: 72px; padding: 0; border: 2px solid transparent; border-radius: 6px; overflow: hidden; cursor: pointer; background: none; }
+    .pd-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .pd-thumb.is-active { border-color: #111; }
+    .pd-thumb:focus-visible { outline: 3px solid #1a73e8; outline-offset: 2px; }
+    .pd-price { font-size: 1.8rem; font-weight: 800; margin: 8px 0 16px; }
+    .pd-buy { display: flex; gap: 12px; align-items: flex-end; margin: 24px 0 8px; flex-wrap: wrap; }
+    .pd-qty { width: 90px; }
+    .pd-details { padding-left: 20px; }
+    .pd-back { display: inline-block; margin-top: 16px; }
+    @media (max-width: 760px) { .pd { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div><a class="skip-link" href="#main">Skip to main content</a></div>
+
+  <div class="promo-bar">
+    <div class="wrap"><span>Free courier delivery on products over <strong>R750</strong>. Collection in store is always free.</span></div>
+  </div>
+
+  <div class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark"></span>Ubuntu Fitness &amp; Wellness</a>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="products.html">Shop</a></li>
+        <li><a href="services.html">Coaching and plans</a></li>
+        <li><a href="cart.html">Cart <span id="cart-count" class="cart-count">0</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="main">
+    <div class="wrap">
+      <a class="pd-back" href="products.html">Back to shop</a>
+      <div id="product-detail"></div>
+      <noscript><p>Turn on JavaScript to see this item.</p></noscript>
+    </div>
+  </div>
+
+  <div class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <h3>Ubuntu Fitness &amp; Wellness</h3>
+        <p>Fitness kit, nutrition and coaching for people who train at home, at the gym, or both.</p>
+      </div>
+      <div>
+        <h3>Visit or contact us</h3>
+        <p>Store: [add your store address]</p>
+        <p>Phone: 011 000 0000</p>
+        <p>Email: <a href="mailto:hello@ubuntufitness.example">hello@ubuntufitness.example</a></p>
+      </div>
+      <div>
+        <h3>Shop</h3>
+        <p><a href="products.html">All products</a></p>
+        <p><a href="services.html">Coaching and plans</a></p>
+        <p><a href="cart.html">Your cart</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/products.js"></script>
+  <script type="text/javascript" src="js/cart.js"></script>
+  <script type="text/javascript" src="js/product.js"></script>
+</body>
+</html>
